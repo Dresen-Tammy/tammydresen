@@ -4,11 +4,13 @@
 *::after {
   box-sizing: border-box;
 }
+
 html {
-  padding: 0;
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
+
 /* Remove default padding */
 ul[class],
 ol[class] {
@@ -37,9 +39,9 @@ dd {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  line-height: 1.5;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -76,8 +78,8 @@ select {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -89,8 +91,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans Condensed', sans-serif;
   color: #54929e;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 h1 {
@@ -98,10 +100,11 @@ h1 {
     font-size: 1.875em;
     margin-bottom: 1em;
 }
+
 h2 {
   font-size: 1.625em;
-  margin-bottom: 10px;
   font-weight: 700;
+  margin-bottom: .625em;
 }
 
 
@@ -110,12 +113,13 @@ html, body {
 }
 
 main {
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-    @media screen and (min-width: 500px) {
-        padding: 50px;
-    }
+  max-width: 75em;
+  margin: auto;
+  padding: 1.875em;
+
+  @media screen and (min-width: 31.25em) {
+      padding: 3.125em;
+  }
 }
 
 
