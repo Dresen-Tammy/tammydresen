@@ -1,0 +1,10 @@
+<section class="thumbnail">
+    <a 
+    name="Go to project"
+    routerLink="project"
+    [queryParams]="project.projectId"
+    >
+        <h3>{{project.title}}</h3>    
+    </a>
+    <img [src]="'../assets/' + project.thumbSrc" [alt]="project.alt"/>
+</section>

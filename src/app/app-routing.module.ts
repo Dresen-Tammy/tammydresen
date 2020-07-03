@@ -8,6 +8,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
   { path: 'contact', component: ContactComponent},
+  {
+    path: 'project',
+    loadChildren: () => import('./project/project.module').then(m => m.ProjectModule)
+  },
   { path: '**', component: HomeComponent}
 ];
 
