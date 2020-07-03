@@ -9,9 +9,9 @@ import { Project } from '../../models/project'
 export class PortfolioThumbnailComponent implements OnInit {
   @Input() public project: Project; 
 
-  constructor() { }
+  public constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

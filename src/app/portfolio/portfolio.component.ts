@@ -64,9 +64,9 @@ export class PortfolioComponent implements OnInit {
       link: 'link'
     },
   ]
-  constructor() { }
+  public constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }
