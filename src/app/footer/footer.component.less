@@ -1,12 +1,18 @@
 footer {
     background-color: rgb(243, 118, 99);
     color: #fff;
-    display: flex;
-    justify-content: space-between;
     padding: 20px 30px;
+    
+    @media screen and (min-width: 500px) {
+        padding: 20px 50px;
+    }
 
     .footer-nav {
-        max-width: 1080px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        
     }
     
     img {

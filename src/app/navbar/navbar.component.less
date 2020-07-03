@@ -4,8 +4,11 @@ header {
     flex-flow: row;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1080px;
+    max-width: 1200px;
     padding: 20px 30px;
+    @media screen and (min-width: 500px) {
+        padding: 20px 50px;
+    }
 }
 
 img {
@@ -22,6 +25,7 @@ ul {
 li {
     padding-left: 20px;
     padding-top: 10px;
+    cursor: pointer;
 
     a {
         color: rgba(0,0,0,.6);
