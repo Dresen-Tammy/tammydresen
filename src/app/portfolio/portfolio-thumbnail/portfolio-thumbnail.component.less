@@ -1,0 +1,40 @@
+section {
+    background-color: rgb(20, 20, 20);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+a {
+    align-self: center;
+    box-shadow: 0px 8px 16px rgba(20, 20, 20, .2);
+    display: block;
+    height: 100%;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-top: 30%;
+    text-align: center;
+    text-decoration: none;
+    width:100%;
+    z-index: 100;
+
+    h3 {
+        color: transparent;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    &:hover h3 {
+        color: #ffffff;
+    }
+}
+
+img {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: 100%;
+}
+
+a:hover ~ img {
+    opacity: .4;
+}
