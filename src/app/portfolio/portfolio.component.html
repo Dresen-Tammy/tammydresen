@@ -1,8 +1,8 @@
-<section class="portfolio">
+<section class="portfolio" *ngIf="{projects: projectService.allProjects$ | async} as vm">
     <h2>Portfolio</h2>
     <div class="thumbnails">        
         <app-portfolio-thumbnail
-        *ngFor="let project of projects"
+        *ngFor="let project of vm.projects"
         [project]="project"
         ></app-portfolio-thumbnail>
     </div>

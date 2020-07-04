@@ -1,1 +1,13 @@
-<p>project works!</p>
+<main>
+    <section *ngIf="{ project: projectService.currentProject$ | async } as vm">
+        <h1>{{vm.project.title}}</h1>
+        <img [src]="'../assets/'+vm.project.featuredImage" [alt]="vm.project.alt"/>
+        <h2>{{vm.project.subtitle}}</h2>
+        <p>{{vm.project.text}}</p>
+        <h2>Technologies used</h2>
+        <ul>
+            <li *ngFor="let item of vm.project.skills">{{item}}</li>
+        </ul>
+        <a [href]="'http' + vm.project.link">Visit {{vm.project.title}}</a>
+    </section>
+</main>

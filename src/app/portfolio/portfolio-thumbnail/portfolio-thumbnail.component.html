@@ -1,9 +1,9 @@
 <section class="thumbnail">
     <a 
         name="Go to project"
-        routerLink="project"
-        [queryParams]="project.projectId"
-        >
+        [routerLink]="['/project']" 
+        [queryParams]="{ id: project.projectId}"
+    >
         <h3>{{project.title}}</h3>    
     </a>
     <img [src]="'../assets/' + project.thumbSrc" [alt]="project.alt"/>
