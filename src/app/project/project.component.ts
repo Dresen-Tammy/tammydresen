@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
-import { tap, takeUntil } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
 import { ProjectService } from '../services/project.service';
 
 @Component({
@@ -12,13 +12,14 @@ import { ProjectService } from '../services/project.service';
 export class ProjectComponent implements OnInit, OnDestroy {
   public projectId: string;
   private destroy$: Subject<boolean> = new Subject<boolean>();
+  
   public constructor(
     private route: ActivatedRoute, 
     public projectService: ProjectService
   ) { }
 
   public ngOnInit(): void {
-    this.setProject();
+    this.setCurrentProject();
   }
 
   public ngOnDestroy(): void {
@@ -26,20 +27,15 @@ export class ProjectComponent implements OnInit, OnDestroy {
     this.destroy$.unsubscribe();
   }
 
-  private setProject() {
-    console.log('here');
+  private setCurrentProject() {
     this.route.queryParamMap.subscribe(
       data => {
-        console.log('here2');
         const params = data['params'];
         const id = params['id'];
-        console.log(id);
         this.projectId = id
         this.projectService.setCurrentProject(id);
-        console.log('here3');
     },
     takeUntil(this.destroy$)
     )
   }
-
 }
