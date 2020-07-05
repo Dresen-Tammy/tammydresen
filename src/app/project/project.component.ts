@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ProjectService } from '../services/project.service';
+import { Location, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-project',
@@ -14,12 +15,15 @@ export class ProjectComponent implements OnInit, OnDestroy {
   private destroy$: Subject<boolean> = new Subject<boolean>();
   
   public constructor(
+    public projectService: ProjectService,
+    public scroll: ViewportScroller,
     private route: ActivatedRoute, 
-    public projectService: ProjectService
+    private location: Location
   ) { }
 
   public ngOnInit(): void {
-    this.setCurrentProject();
+    this.setProject();
+    this.scroll.scrollToPosition([0,0]);
   }
 
   public ngOnDestroy(): void {
@@ -27,7 +31,21 @@ export class ProjectComponent implements OnInit, OnDestroy {
     this.destroy$.unsubscribe();
   }
 
-  private setCurrentProject() {
+  public prevProject(): void {
+    const prevId = this.projectService.setPreviousProject(this.projectId);
+    this.projectId = prevId;
+    this.updateLocation(prevId);
+    this.scroll.scrollToPosition([0,0]);
+  }
+
+  public nextProject(): void {
+    const nextId = this.projectService.setNextProject(this.projectId);
+    this.projectId = nextId;
+    this.updateLocation(nextId);
+    this.scroll.scrollToPosition([0,0]);    
+  }
+
+  private setProject(): void {
     this.route.queryParamMap.subscribe(
       data => {
         const params = data['params'];
@@ -37,5 +55,10 @@ export class ProjectComponent implements OnInit, OnDestroy {
     },
     takeUntil(this.destroy$)
     )
+    this.scroll.scrollToPosition([0,0]);
+  }
+
+  private updateLocation(projectId: string): void {
+    this.location.replaceState('/project?id=' + projectId);
   }
 }

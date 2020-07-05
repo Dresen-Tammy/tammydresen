@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioThumbnailComponent } from './portfolio/portfolio-thumbnail/portfolio-thumbnail.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PortfolioThumbnailComponent } from './portfolio/portfolio-thumbnail/por
     HomeComponent,
     FooterComponent,
     PortfolioComponent,
-    PortfolioThumbnailComponent
+    PortfolioThumbnailComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

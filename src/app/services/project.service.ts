@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../models/project';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -90,7 +91,7 @@ export class ProjectService {
     link: 'default'
   };
 
-  public constructor() { 
+  public constructor(private router: Router) { 
     this.currentProjectBS = new BehaviorSubject<Project>(this.defaultProject);
     this.currentProject$ = this.currentProjectBS.asObservable();
     this.allProjectsBS = new BehaviorSubject<Array<Project>>(this.projects);
@@ -98,11 +99,64 @@ export class ProjectService {
   }
 
   public setCurrentProject(projectId: string): void {
+    const currentProject = this.getProjectByProjectId(projectId);
+    if (currentProject) {
+      this.currentProjectBS.next(currentProject);
+    } else {
+      this.router.navigate(['error']);
+    }
+  }
+
+  public setPreviousProject(projectId: string): string {
+    const prevProjectId = this.getPrevProjectId(projectId);
+    if (prevProjectId) {
+      this.setCurrentProject(prevProjectId);
+      return prevProjectId;
+    }
+    return projectId;
+  }
+
+  public setNextProject(projectId: string): string {
+    const nextProjectId = this.getNextProjectId(projectId);
+    if (nextProjectId) {
+      this.setCurrentProject(nextProjectId);
+      return nextProjectId;
+    }
+    return projectId;
+  }
+
+  private getProjectByProjectId(projectId: string): Project {
+    let project: Project;
     const list = this.allProjectsBS.getValue();
-    list.map(project => {
-      if (project.projectId === projectId) {
-        this.currentProjectBS.next(project);
+    list.map(item => {
+      if (item.projectId === projectId) {
+        project = item
       }
-    })
+    });
+    return project;
+  }
+
+  private getNextProjectId(projectId: string): string {
+    const list = this.allProjectsBS.getValue();
+    let index: number = list.indexOf(this.currentProjectBS.getValue());
+    let nextProjectId: string;
+    index++;
+    if (index >= list.length) {
+      index = 0;
+    }
+    nextProjectId = list[index].projectId
+    return nextProjectId;
+  }
+
+  private getPrevProjectId(projectId: string): string {
+    const list = this.allProjectsBS.getValue();
+    let index: number = list.indexOf(this.currentProjectBS.getValue());
+    let nextProjectId: string;
+    index--;
+    if (index <= 0) {
+      index = list.length-1;
+    }
+    nextProjectId = list[index].projectId
+    return nextProjectId;
   }
 }
