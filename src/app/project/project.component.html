@@ -1,1 +1,18 @@
-<p>project works!</p>
+<main>
+    <section *ngIf="{ project: projectService.currentProject$ | async } as vm">
+        <h1>{{vm.project.title}}</h1>
+        <div class="image-box">
+            <img class="main-image" [src]="'../assets/'+vm.project.featuredImage" [alt]="vm.project.alt"/>
+            <button class="prev" (click)="prevProject()"><img src="../../assets/arrow_back_ios-24px.svg" alt="previous project"/></button>
+            <button class="next" (click)="nextProject()"><img src="../../assets/arrow_forward_ios-24px.svg" alt="previous project"/></button>
+        </div>
+            <h2>{{vm.project.subtitle}}</h2>
+        <p>{{vm.project.text}}</p>
+        <h2>Technologies used</h2>
+        <ul>
+            <li *ngFor="let item of vm.project.skills">{{item}}</li>
+        </ul>
+        <button class="next-button" (click)="nextProject()">Next Project</button>
+        <a [href]="'http' + vm.project.link">View Live Site</a>
+    </section>
+</main>
