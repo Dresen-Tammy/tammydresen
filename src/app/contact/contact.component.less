@@ -1,6 +1,96 @@
-img {
-    margin: auto;
+form {
+  background-color: #a3cbd4;
+  padding: 20px;  
+  margin-top: 20px;
+
+  label {
+      display: block;
+      color: #333;
+      padding-top: 15px;
+  }
+  input, textarea {
+      width: 100%;
+      border: none;
+      border-radius: 2px;
+  }
+
+  button {
+      display: block;
+      background-color: #fff;
+      color: #338496;
+      border: none;
+      margin: 15px 0;
+      padding: 10px;
+      border-radius: 2px;
+
+  }
 }
-h1 {
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+section {
+    
+}
+.bio {
+    
+    padding: 10px;
     text-align: center;
+    .me {
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 50%;
+        max-width: 300px;
+        box-shadow: 0px 8px 16px rgba(20,20,20,.2);
+    }
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+address {
+    color: #338496;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.social {
+    width: 24px;
+    display: inline;
+    margin: 10px;
+}
+
+.contact-form {
+    background-color: #a3cbd4;
+}
+
+@media screen and (min-width: 600px) {
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   
+    }
+
+
+    form {
+        margin-top: 0;
+    } 
+
+    .bio {
+        padding: 0;
+        max-width: 300px;
+        margin-right: 50px;
+        .me {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    section {
+        grid-template-columns: 300px auto;
+    }
 }

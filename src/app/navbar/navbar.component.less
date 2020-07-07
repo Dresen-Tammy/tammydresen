@@ -16,20 +16,28 @@ div {
 }
 
 img {
-    height: 2.6875em;
-    width: 11.625em;
+    height: 2em;
+    width: 8.72em;
+    @media screen and (min-width: 450px) {
+        height: 2.6875em;
+        width: 11.625em;
+    }
 }
 
 ul {
     display: flex;
     list-style: none;
     margin: 0;
+    padding-left: 0;
 }
 
 li {
     cursor: pointer;
-    padding-left: 1.25em;
-    padding-top: .625em;
+    padding-top: .3125em;
+    @media screen and (min-width: 450px) {
+        padding-left: 1.25em;
+        padding-top: .625em;
+    }
 
     a {
         color: rgba(0,0,0,.6);

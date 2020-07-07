@@ -1,4 +1,45 @@
 <main>
-    <img src="../../assets/webMaintenance.jpg"/>
-    <h1>Something great is coming!</h1>
+    
+    <h1>Contact me</h1>
+    <section>
+        <div class="bio">
+            <img class="me" src="../../assets/TammySqrFlip2020.jpg" alt="Tammy Dresen" />
+            <div class="about">
+                
+                <h2>Tammy Dresen</h2>
+                <address href="takadre@gmail.com">takadre@gmail.com</address>
+            </div>
+            
+            <a href="https://www.linkedin.com/in/tammy-dresen-47407499/"><img class="social" src="../../assets//linkedinO.jpg" alt="LinkedIn"/></a>
+            <a href="https://github.com/Dresen-Tammy"><img class="social" src="../../assets/GitHubO.jpg" alt="GitHub"/></a>
+        </div>
+        <form
+        name="contact-form"
+        method="POST"
+        data-netlify="true"
+        action="/form-success"
+        >
+        <h2>I would love to hear from you!</h2>
+            <div class="hidden">
+                <label>Not for use by humans:
+                    <input name="bot-field"/>
+                </label>
+            </div>
+            <input 
+            type="hidden"
+            name="form-name"
+            value="contact-form"
+            />
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required/>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+    </section>
 </main>

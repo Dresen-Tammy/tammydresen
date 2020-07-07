@@ -12,6 +12,7 @@ const routes: Routes = [
     path: 'project',
     loadChildren: () => import('./project/project.module').then(m => m.ProjectModule)
   },
+  { path: 'form-success', loadChildren: () => import('./form-success/form-success.module').then(m => m.FormSuccessModule) },
   {
     path: '**', component: Error404Component
   }
