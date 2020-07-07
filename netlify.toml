@@ -1,6 +1,6 @@
 [build]
   publish = "dist/static"
-  command = "ng run jam-prod"
+  command = "npm run jam-prod"
 [[redirects]]
   from="/*"
   to="/index.html"
