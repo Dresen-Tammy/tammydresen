@@ -1,73 +1,71 @@
 form {
   background-color: #a3cbd4;
-  padding: 20px;  
-  margin-top: 20px;
+  margin-top: 1.25em;
+  padding: 1.25em;  
 
   label {
-      display: block;
       color: #333;
-      padding-top: 15px;
+      display: block;
+      padding-top: 1em;
   }
+
   input, textarea {
-      width: 100%;
       border: none;
       border-radius: 2px;
+      width: 100%;
   }
 
   button {
-      display: block;
       background-color: #fff;
-      color: #338496;
       border: none;
-      margin: 15px 0;
-      padding: 10px;
       border-radius: 2px;
-
+      color: #338496;
+      display: block;
+      margin: 1em 0;
+      padding: .625em;
   }
 }
 
 .hidden {
-    visibility: hidden;
     height: 0;
+    visibility: hidden;
 }
-section {
-    
-}
-.bio {
-    
-    padding: 10px;
+
+.bio {    
+    padding: .625em;
     text-align: center;
+
     .me {
-        width: 90%;
-        margin: 20px auto;
         border-radius: 50%;
-        max-width: 300px;
         box-shadow: 0px 8px 16px rgba(20,20,20,.2);
+        margin: 1.25em auto;
+        max-width: 18.75em;
+        width: 90%;
     }
 }
 
 h2 {
-    margin-top: 30px;
+    margin-top: 1.875em;
 }
 
 address {
     color: #338496;
+    font-size: 1.125em;
     font-style: normal;
-    font-size: 18px;
 }
 
 .social {
-    width: 24px;
     display: inline;
-    margin: 10px;
+    margin: .625em;
+    width: 1.5em;
+    padding-top: .625em;
 }
 
 .contact-form {
     background-color: #a3cbd4;
 }
 
-@media screen and (min-width: 600px) {
-
+@media screen and (min-width: 37.5rem) {
     section {
         display: grid;
         grid-template-columns: 1fr 1fr;   
@@ -79,9 +77,10 @@ address {
     } 
 
     .bio {
+        max-width: 18.75em;
+        margin-right: 3.125em;
         padding: 0;
-        max-width: 300px;
-        margin-right: 50px;
+        
         .me {
             margin: 0;
             width: 100%;
@@ -89,8 +88,8 @@ address {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 50rem) {
     section {
-        grid-template-columns: 300px auto;
+        grid-template-columns: 18.75em auto;
     }
 }
