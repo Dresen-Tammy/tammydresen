@@ -7,12 +7,17 @@ import { Error404Component } from './error404/error404.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'contact', component: ContactComponent},
+  { path: 'contact', 
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+  
+  },
   {
     path: 'project',
     loadChildren: () => import('./project/project.module').then(m => m.ProjectModule)
   },
-  { path: 'form-success', loadChildren: () => import('./form-success/form-success.module').then(m => m.FormSuccessModule) },
+  { 
+    path: 'form-success', 
+    loadChildren: () => import('./form-success/form-success.module').then(m => m.FormSuccessModule) },
   {
     path: '**', component: Error404Component
   }
