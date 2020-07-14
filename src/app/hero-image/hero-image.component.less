@@ -47,6 +47,17 @@
     }
 }
 
+.butterfly4 {
+    animation: flutter3 10s linear infinite;
+    right: 20%;
+    top: 20%;
+    width: 5%;
+    
+    img {
+        width: 100%;
+    }
+}
+
 .cloud1, .cloud2, .cloud3, .cloud4 {
     transform: rotate(5deg);
     transform-origin: top center;
@@ -102,32 +113,35 @@
 }
 
 .tire1 {
-    animation: rotate 10s infinite linear;
+    animation: rotate 10s infinite linear forwards;
     bottom: 14vw;
     left: 4vw;
+    transition: all .5s;
     width: 28vw;
-
     @media screen and (min-width: 50rem) {
         bottom: 8.3vw;
         left: 19vw;
         width: 17vw;
-     }
-
-     @media screen and (min-width: 87.5rem) {
+    }
+    
+    @media screen and (min-width: 87.5rem) {
         bottom: 7.375em;
-        left: 17.0625em;
+        left: 16.9em;
         width: 14.8125em;
     }
-
+    
     img {
         width: 100%;
+        animation: rotate 2s infinite linear forwards;
+        animation-play-state: paused;
     }
 }
 
 .tire2 {
-    animation: rotate 10s infinite linear;
+    animation: rotate 10s infinite linear forwards;
     bottom: 13.5vw;
     right: 3.5vw;
+    transition: all .5s;
     width: 28.7vw;
 
     @media screen and (min-width: 50rem) {
@@ -144,24 +158,31 @@
 
     img {
         width: 100%;
+        animation: rotate 2s infinite linear forwards;
+        animation-play-state: paused;
     }
 }
 
+.tiregear:hover ~ .tire img, .tirefront:hover ~ .tire img {
+    animation-play-state: running;
+}
+
 .tiregear {
-    bottom: 11vw;
-    left: -28.5vw;
-    width: 143vw;
+    bottom: 13.1vw;
+    left: 3.1vw;
+    width: 29vw;
+    z-index: 1000;
 
     @media screen and (min-width: 50rem) {
-        bottom: 6.6vw;
-        left: 0vw;
-        width: 85vw;
+        bottom: 8.3vw;
+        left: 19.2vw;
+        width: 16.5vw;
     }
 
     @media screen and (min-width: 87.5rem) {
-        bottom: 5.8125em;
-        left: -.125em;
-        width: 75em;
+        bottom: 7.1em;
+        left: 16.5em;
+        width: 15em;
     }
 
     img {
@@ -170,20 +191,21 @@
 }
 
 .tirefront {
-    bottom: 10.5vw;
-    right: -29.9vw;
-    width: 143vw;
+    bottom: 13.1vw;
+    right: 3.8vw;
+    width: 29.3vw;
+    z-index: 1000;
 
     @media screen and (min-width: 50rem) {
-        bottom: 6.6vw;
-        right: -.1vw;
-        width: 85vw;
+        bottom: 7.4vw;
+        right: 19.5vw;
+        width: 18vw;
     }
 
     @media screen and (min-width: 87.5rem) {
-        bottom: 5.75em;
-        left: 0;
-        width: 75em;
+        bottom: 6.9em;
+        right: 17.375em;
+        width: 15.3125em;
     }
 
     img {
@@ -196,12 +218,12 @@ ul {
 }
 
 @keyframes flutter1 {
-    0% {top: 10%; left: 5%}
-    20% {top: 8%; left: 4%}
-    40% {top: 7%; left: 3%}
-    60% {top: 9%; left: 6%}
-    80% {top: 11%; left: 5%}
-    100% {top: 10%; left: 5%}
+    0% {top: 10%; left: 5%; }
+    20% {top: 8%; left: 4%; }
+    40% {top: 7%; left: 3%; }
+    60% {top: 9%; left: 6%; }
+    80% {top: 11%; left: 5%; }
+    100% {top: 10%; left: 5%; }
 }
 
 @keyframes flutter2 {
