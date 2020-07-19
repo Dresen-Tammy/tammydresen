@@ -13,7 +13,7 @@ export class ProjectService {
     {
       projectId: 'glacier',
       title: 'Glacier Marketing Website',
-      thumbSrc: 'glaciermark-thumb.jpg',
+      thumbSrc: 'https://res.cloudinary.com/dbgufprxr/image/upload/v1594136602/tammydresen/glaciermark-thumb_kqfcxg.jpg',
       featuredImage: 'glacierMarketingFeature.jpg',
       alt: 'glaciermark website',
       subtitle: 'Website rebuild in Angular 9',
@@ -24,7 +24,7 @@ export class ProjectService {
     {
       projectId: 'race',
       title: 'Race The Sun App',
-      thumbSrc: 'raceTheSun-thumb.png',
+      thumbSrc: 'https://res.cloudinary.com/dbgufprxr/image/upload/v1594136586/tammydresen/raceTheSun-thumb_jn8mzr.png',
       featuredImage: 'raceTheSunFeature.jpg',
       alt: 'Race The Sun App',
       subtitle: 'Single Page Application built in JavaScript',
@@ -35,7 +35,7 @@ export class ProjectService {
     {
       projectId: 'dinner',
       title: 'What\'s For Dinner App',
-      thumbSrc: 'dinner-thumb.png',
+      thumbSrc: 'https://res.cloudinary.com/dbgufprxr/image/upload/v1594136577/tammydresen/dinner-thumb_vapsoz.png',
       featuredImage: 'WhatsForDinnerFeature.jpg',
       alt: 'Recipe App',
       subtitle: 'Node.Js Recipe App',
@@ -46,7 +46,7 @@ export class ProjectService {
     {
       projectId: 'david',
       title: 'David Dresen Portfolio',
-      thumbSrc: 'daviddresen.jpg',
+      thumbSrc: 'https://res.cloudinary.com/dbgufprxr/image/upload/v1594136652/tammydresen/daviddresen_vso6pd.jpg',
       featuredImage: 'davidDresenFeature.jpg',
       alt: 'Creative Director Portfolio',
       subtitle: 'Jamstack Website in Angular 9',
@@ -57,7 +57,7 @@ export class ProjectService {
     {
       projectId: 'mariasha',
       title: 'Mariasha Louise Photography',
-      thumbSrc: 'mariashaLouise.png',
+      thumbSrc: 'https://res.cloudinary.com/dbgufprxr/image/upload/v1594136679/tammydresen/mariashaLouise_kpqr3w.png',
       featuredImage: 'mariashaFeature.jpg',
       alt: 'Photography Website',
       subtitle: 'Responsive Website',
@@ -68,7 +68,7 @@ export class ProjectService {
     {
       projectId: 'rideKeeper',
       title: 'Ride Keeper Cycling App',
-      thumbSrc: 'rideKeeper.jpg',
+      thumbSrc: 'https://res.cloudinary.com/dbgufprxr/image/upload/v1594136634/tammydresen/rideKeeper_hotl7h.jpg',
       featuredImage: 'rideKeeperFeature.jpg',
       alt: 'Cycling App',
       subtitle: 'PHP Cycling App',

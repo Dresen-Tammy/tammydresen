@@ -13,6 +13,6 @@
             <li *ngFor="let item of vm.project.skills">{{item}}</li>
         </ul>
         <button class="next-button" (click)="nextProject()">Next Project</button>
-        <a [href]="'http' + vm.project.link">View Live Site</a>
+        <a [href]="'http' + vm.project.link">Visit {{vm.project.title}}</a>
     </section>
 </main>

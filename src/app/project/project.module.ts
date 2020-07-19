@@ -8,11 +8,13 @@ const projectRoutes: Routes = [
     path: '', 
     children: [
       {
-        'path': '', component: ProjectComponent
+        'path': '', 
+        component: ProjectComponent
       }
     ]
   } 
 ]
+
 @NgModule({
   declarations: [ProjectComponent],
   imports: [
