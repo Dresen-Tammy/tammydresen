@@ -10,6 +10,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioThumbnailComponent } from './portfolio/portfolio-thumbnail/portfolio-thumbnail.component';
 import { Error404Component } from './error404/error404.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { HeroImageComponent } from './hero-image/hero-image.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     FooterComponent,
     PortfolioComponent,
     PortfolioThumbnailComponent,
-    Error404Component
+    Error404Component,
+    HeroImageComponent
   ],
   imports: [
     BrowserModule,
