@@ -1,24 +1,32 @@
 .parallax {
-    background-image: url(../../assets/programmer_bikerNoCloudsTall2.jpg);
+    // background-image: url(../../assets/programmerTall.jpg);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 90vw;
-    height: 80vw;
-    max-height: 37.5em;
     overflow: hidden;
-    padding-bottom: 1.875em;
     position: relative;
-    width: 85vw;
-    max-width: 75em;
+    width: 100%;
     @media screen and (min-width: 50rem) {
-        background-image: url(../../assets/programmer_bikerNoCloudsWShapes.jpg);
+        // background-image: url(../../assets/programmerWide.jpg);
         background-size: 100%;
-        height: 50vw;
     }
 }
 
+.background img {
+    width: 100%;
+    height: 100%;
+}
 #scene {
     list-style: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
 }
 
 .layer {
@@ -114,20 +122,20 @@
 
 .tire1 {
     animation: rotate 10s infinite linear forwards;
-    bottom: 14vw;
-    left: 4vw;
-    transition: all .5s;
-    width: 28vw;
+    bottom: 16.3%;
+    left: 7.1%;
+    transition: all 0.5s;
+    width: 31.3%;
     @media screen and (min-width: 50rem) {
-        bottom: 8.3vw;
-        left: 19vw;
-        width: 17vw;
+        bottom: 15.5%;
+        left: 22.5%;
+        width: 19.6%;
     }
     
     @media screen and (min-width: 87.5rem) {
-        bottom: 7.375em;
-        left: 16.9em;
-        width: 14.8125em;
+        bottom: 6.7em;
+        left: 15.5em;
+        width: 13.6em;
     }
     
     img {
@@ -139,21 +147,21 @@
 
 .tire2 {
     animation: rotate 10s infinite linear forwards;
-    bottom: 13.5vw;
-    right: 3.5vw;
-    transition: all .5s;
-    width: 28.7vw;
+    bottom: 16%;
+    right: 7.1%;
+    transition: all 0.5s;
+    width: 31.7%;
 
     @media screen and (min-width: 50rem) {
-        bottom: 8.4vw;
-        right: 19.8vw;
-        width: 16.8vw;
+        bottom: 15.6%;
+        right: 23.5%;
+        width: 19.6%;
     }
 
     @media screen and (min-width: 87.5rem) {
-        bottom: 7.375em;
-        right: 17.5em;
-        width: 14.8125em;
+        bottom: 6.7em;
+        right: 16.1em;
+        width: 13.6em;
     }
 
     img {
@@ -168,21 +176,21 @@
 }
 
 .tiregear {
-    bottom: 13.1vw;
-    left: 3.1vw;
-    width: 29vw;
+    bottom: 16.1%;
+    left: 7%;
+    width: 31%;
     z-index: 1000;
 
     @media screen and (min-width: 50rem) {
-        bottom: 8.3vw;
-        left: 19.2vw;
-        width: 16.5vw;
+        bottom: 15.3%;
+        left: 22.4%;
+        width: 19.5%;
     }
 
     @media screen and (min-width: 87.5rem) {
-        bottom: 7.1em;
-        left: 16.5em;
-        width: 15em;
+        bottom: 6.35em;
+        left: 15.2em;
+        width: 14em;
     }
 
     img {
@@ -191,21 +199,21 @@
 }
 
 .tirefront {
-    bottom: 13.1vw;
-    right: 3.8vw;
-    width: 29.3vw;
+    bottom: 15.2%;
+    right: 7%;
+    width: 32.7%;
     z-index: 1000;
 
     @media screen and (min-width: 50rem) {
-        bottom: 7.4vw;
-        right: 19.5vw;
-        width: 18vw;
+        bottom: 15.1%;
+        right: 23.7%;
+        width: 20%;
     }
 
     @media screen and (min-width: 87.5rem) {
-        bottom: 6.9em;
-        right: 17.375em;
-        width: 15.3125em;
+        bottom: 6.2em;
+        right: 15.9em;
+        width: 14.3125em;
     }
 
     img {
