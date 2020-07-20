@@ -1,11 +1,9 @@
-import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ProjectComponent } from './project.component';
-import { Observable, of, Subscription, PartialObserver, BehaviorSubject, Subject } from 'rxjs';
-import { convertToParamMap, ParamMap, Params, ActivatedRoute, ActivatedRouteSnapshot, UrlSegment, Data, Route } from '@angular/router';
-import { ReplaySubject } from 'rxjs';
+import { Observable, of, BehaviorSubject, Subject } from 'rxjs';
+import { convertToParamMap, ParamMap, ActivatedRoute } from '@angular/router';
 import { Project } from '../models/project';
-import { Type } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { ProjectService } from '../services/project.service';
 
@@ -41,8 +39,7 @@ export class ActivatedRouteStub {
           queryParamMap: this.testQueryParamMap
       }
   }
-
-}
+};
 
 class mockViewportScroller {
   public scrollToPosition([num1, num2]): void {}

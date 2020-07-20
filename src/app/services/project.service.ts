@@ -108,7 +108,7 @@ export class ProjectService {
   }
 
   public setPreviousProject(projectId: string): string {
-    const prevProjectId = this.getPrevProjectId(projectId);
+    const prevProjectId = this.getPrevProjectId();
     if (prevProjectId) {
       this.setCurrentProject(prevProjectId);
       return prevProjectId;
@@ -117,7 +117,7 @@ export class ProjectService {
   }
 
   public setNextProject(projectId: string): string {
-    const nextProjectId = this.getNextProjectId(projectId);
+    const nextProjectId = this.getNextProjectId();
     if (nextProjectId) {
       this.setCurrentProject(nextProjectId);
       return nextProjectId;
@@ -136,7 +136,7 @@ export class ProjectService {
     return project;
   }
 
-  private getNextProjectId(projectId: string): string {
+  private getNextProjectId(): string {
     const list = this.allProjectsBS.getValue();
     let index: number = list.indexOf(this.currentProjectBS.getValue());
     let nextProjectId: string;
@@ -148,7 +148,7 @@ export class ProjectService {
     return nextProjectId;
   }
 
-  private getPrevProjectId(projectId: string): string {
+  private getPrevProjectId(): string {
     const list = this.allProjectsBS.getValue();
     let index: number = list.indexOf(this.currentProjectBS.getValue());
     let nextProjectId: string;
