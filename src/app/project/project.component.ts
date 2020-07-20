@@ -48,11 +48,12 @@ export class ProjectComponent implements OnInit, OnDestroy {
   private setProject(): void {
     this.route.queryParamMap.subscribe(
       data => {
+        console.log(data);
         const params = data['params'];
         const id = params['id'];
         this.projectId = id
         this.projectService.setCurrentProject(id);
-    },
+      },
     takeUntil(this.destroy$)
     )
     this.scroll.scrollToPosition([0,0]);
