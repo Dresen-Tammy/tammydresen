@@ -8,14 +8,10 @@ import { RouterModule, Routes } from '@angular/router';
 const successRoutes: Routes = [
   {
     path: '', 
-    children: [
-      {
-        'path': '', 
-        component: FormSuccessComponent
-      }
-    ]
-  } 
+    component: FormSuccessComponent 
+  }
 ]
+  
 
 @NgModule({
   declarations: [FormSuccessComponent],
