@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PortfolioThumbnailComponent } from './portfolio-thumbnail.component';
 import { Project } from 'src/app/models/project';
+import { ProjectComponent } from 'src/app/project/project.component';
+import { Component } from '@angular/core';
 
 const project: Project = {
   projectId: 'testId',
@@ -15,13 +17,19 @@ const project: Project = {
   link: 'test'
 }
 
+@Component({
+  selector: 'app-project',
+  template: ''
+})
+class MockProjectComponent {}
+
 describe('PortfolioThumbnailComponent', () => {
   let component: PortfolioThumbnailComponent;
   let fixture: ComponentFixture<PortfolioThumbnailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PortfolioThumbnailComponent ]
+      declarations: [ PortfolioThumbnailComponent, MockProjectComponent ]
     })
     .compileComponents();
   }));

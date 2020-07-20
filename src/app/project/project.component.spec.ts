@@ -96,12 +96,17 @@ describe('ProjectComponent', () => {
   beforeEach(() => {
       fixture = TestBed.createComponent(ProjectComponent);
       component = fixture.componentInstance;
-      const activatedRoute = fixture.debugElement.injector.get(ActivatedRoute) as any;      
-      activatedRoute.testQueryParamMap = {id: 'test'};
+      
       fixture.detectChanges();
   });
 
+  afterEach(() => {
+
+  })
+
   it('should create', () => {
+    const activatedRoute = fixture.debugElement.injector.get(ActivatedRoute) as any;      
+    activatedRoute.testQueryParamMap = {id: 'test'};
     expect(component).toBeTruthy();
   });
 
@@ -267,6 +272,8 @@ describe('ProjectComponent', () => {
   describe('setProject', () => {
     it('should update projectId', () => {
       // ARRANGE
+      const activatedRoute = fixture.debugElement.injector.get(ActivatedRoute) as any;      
+      activatedRoute.testQueryParamMap = {id: 'test'};
       const expectedId = 'test';
       const componentAny: any = component as any;
 
